@@ -71,7 +71,7 @@ pipeline {
     stage('============ Deploy workload ============') {
         when { expression { return params.DEPLOY_WORKLOAD } }
         steps {
-            sshagent (credentials: ['std05-github-wh']) {
+            sshagent (credentials: ['2274132f-2254-44ce-9f00-64e79626b186']) {
                 sh """#!/bin/bash
                     scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \
                         deploy/docker-compose.yml \
